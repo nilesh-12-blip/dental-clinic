@@ -333,5 +333,16 @@ document.getElementById('apptModal').addEventListener('click', function(e) {
   if (e.target === this) closeApptModal();
 });
 
-// ===== INIT =====
+// ===== INIT & CROSS-TAB SYNC =====
 document.addEventListener('DOMContentLoaded', checkAuth);
+
+// Auto-update dashboard instantly across all open tabs when new appts/reviews are added
+window.addEventListener('storage', function(e) {
+  if (e.key === 'ps_appointments' || e.key === 'ps_reviews') {
+    const activeTab = document.querySelector('.tab-content.active');
+    if (activeTab && activeTab.id === 'tab-overview') loadOverview();
+    if (activeTab && activeTab.id === 'tab-appointments') renderAppointments();
+    if (activeTab && activeTab.id === 'tab-patients') renderPatients();
+    if (activeTab && activeTab.id === 'tab-reviews') renderAdminReviews();
+  }
+});

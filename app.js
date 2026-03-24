@@ -490,11 +490,18 @@ function initReveal() {
 });
 
 // ============================================================
-//   INIT
+//   INIT & CROSS-TAB SYNC
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initNavbar();
   renderReviews();
   initReveal();
+});
+
+// Auto-update UI instantly across all open tabs when storage changes
+window.addEventListener('storage', function(e) {
+  if (e.key === 'ps_reviews') {
+    renderReviews();
+  }
 });
