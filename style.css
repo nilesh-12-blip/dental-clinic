@@ -5,21 +5,21 @@
    ============================================ */
 
 :root {
-  --teal: #0B7B6B;
-  --teal-dark: #065E52;
-  --teal-light: #14A088;
-  --teal-pale: #E8F5F2;
-  --gold: #C8A96B;
-  --gold-light: #F0E0B8;
-  --cream: #FAF8F3;
+  --teal: #1A365D;
+  --teal-dark: #0F172A;
+  --teal-light: #3B82F6;
+  --teal-pale: #EFF6FF;
+  --gold: #D97706;
+  --gold-light: #FEF3C7;
+  --cream: #F8FAFC;
   --white: #FFFFFF;
-  --dark: #1A2332;
-  --mid: #3D5166;
-  --muted: #8A9AB0;
-  --border: #E2EAE8;
-  --shadow-sm: 0 2px 12px rgba(11,123,107,0.08);
-  --shadow-md: 0 8px 32px rgba(11,123,107,0.12);
-  --shadow-lg: 0 20px 60px rgba(11,123,107,0.16);
+  --dark: #0F172A;
+  --mid: #475569;
+  --muted: #94A3B8;
+  --border: #E2E8F0;
+  --shadow-sm: 0 2px 12px rgba(26,54,93,0.08);
+  --shadow-md: 0 8px 32px rgba(26,54,93,0.12);
+  --shadow-lg: 0 20px 60px rgba(26,54,93,0.16);
   --radius: 16px;
   --radius-sm: 8px;
   --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -105,15 +105,15 @@ em { font-style: italic; color: var(--teal); }
 /* ===== BUTTONS ===== */
 .btn-primary {
   display: inline-block; padding: 14px 32px;
-  background: var(--teal); color: white;
+  background: linear-gradient(135deg, var(--teal-light), var(--teal)); color: white;
   border: none; border-radius: 100px;
   font-family: 'DM Sans', sans-serif;
   font-size: 1rem; font-weight: 600;
   cursor: pointer; text-decoration: none;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(11,123,107,0.3);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
-.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(11,123,107,0.4); }
+.btn-primary:hover { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4); }
 .btn-outline {
   display: inline-block; padding: 14px 32px;
   background: transparent; color: white;
@@ -124,7 +124,7 @@ em { font-style: italic; color: var(--teal); }
   cursor: pointer; text-decoration: none;
   transition: var(--transition);
 }
-.btn-outline:hover { background: rgba(255,255,255,0.15); border-color: white; }
+.btn-outline:hover { background: white; color: var(--teal-dark); border-color: white; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2); }
 .full-width { width: 100%; text-align: center; }
 
 /* ===== SECTIONS ===== */
@@ -157,29 +157,29 @@ em { font-style: italic; color: var(--teal); }
 
 .slide {
   min-width: 100%;
-  height: 90vh;
-  min-height: 600px;
+  height: 45vh;
+  min-height: 450px;
   display: flex; align-items: center;
   position: relative; overflow: hidden;
 }
 
 .slide-1 {
-  background: linear-gradient(135deg, rgba(0, 82, 212, 0.85) 0%, rgba(67, 100, 247, 0.85) 50%, rgba(111, 177, 252, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%),
               url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   background-blend-mode: normal;
 }
 .slide-2 {
-  background: linear-gradient(135deg, rgba(74, 0, 224, 0.85) 0%, rgba(142, 45, 226, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%),
               url('https://images.unsplash.com/photo-1598256989476-857e4922ca95?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   background-blend-mode: normal;
 }
 .slide-3 {
-  background: linear-gradient(135deg, rgba(19, 78, 94, 0.85) 0%, rgba(113, 178, 128, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%),
               url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   background-blend-mode: normal;
 }
 .slide-4 {
-  background: linear-gradient(135deg, rgba(26, 41, 128, 0.85) 0%, rgba(38, 208, 206, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 58, 138, 0.6) 100%),
               url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
   background-blend-mode: normal;
 }
@@ -191,7 +191,7 @@ em { font-style: italic; color: var(--teal); }
 
 .slide-content {
   position: relative; z-index: 2;
-  flex: 1; padding: 0 80px;
+  flex: 1; padding: 0 40px;
   max-width: 680px;
   animation: slideIn 0.8s ease forwards;
 }
@@ -207,32 +207,33 @@ em { font-style: italic; color: var(--teal); }
   border: 1px solid rgba(200,169,107,0.4);
   border-radius: 100px; font-size: 0.82rem;
   font-weight: 600; letter-spacing: 1px;
-  text-transform: uppercase; margin-bottom: 20px;
+  text-transform: uppercase; margin-bottom: 12px;
 }
 
 .slide-content h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   color: white; line-height: 1.15;
-  margin-bottom: 20px; font-weight: 700;
+  margin-bottom: 12px; font-weight: 700;
 }
 .slide-content h1 em { color: var(--gold); font-style: italic; }
 .slide-content p {
   color: rgba(255,255,255,0.8);
-  font-size: 1.15rem; line-height: 1.7;
-  margin-bottom: 36px; max-width: 480px;
+  font-size: 1.05rem; line-height: 1.6;
+  margin-bottom: 24px; max-width: 480px;
 }
 .slide-btns { display: flex; gap: 16px; flex-wrap: wrap; }
 
 .slide-visual {
   flex: 1; display: flex; justify-content: center; align-items: center;
-  padding: 48px; position: relative; z-index: 2;
+  padding: 24px; position: relative; z-index: 2;
 }
 
 /* Dental Art Illustrations */
 .dental-art {
-  width: 320px; height: 320px;
+  width: 260px; height: 260px;
   display: flex; justify-content: center; align-items: center;
   position: relative;
+  transform: scale(0.85); /* scale down the whole visual a bit for the halvened height */
 }
 
 .tooth-shape {
@@ -787,12 +788,12 @@ em { font-style: italic; color: var(--teal); }
   .nav-book { display:none; }
   .hamburger { display:block; }
   
-  .slide { height:auto; min-height:100vh; flex-direction:column; justify-content:center; padding-top:100px; padding-bottom:60px; gap:32px; }
+  .slide { height:auto; min-height:50vh; flex-direction:column; justify-content:center; padding-top:80px; padding-bottom:40px; gap:20px; }
   .slide-content { padding:0 24px; max-width:100%; text-align:center; display: flex; flex-direction: column; align-items: center; }
-  .slide-content p { margin:20px auto; }
-  .slide-visual { display:flex; padding:0; transform:scale(0.85); margin-top:-20px; }
-  .slide-btns { justify-content:center; width:100%; }
-  .slide-content h1 { font-size:2.6rem; text-shadow: 0 3px 12px rgba(0,0,0,0.25); }
+  .slide-content p { margin:16px auto; font-size:1rem; }
+  .slide-visual { display:flex; padding:0; transform:scale(0.65); margin-top:-30px; }
+  .slide-btns { justify-content:center; width:100%; gap:12px; }
+  .slide-content h1 { font-size:2.2rem; text-shadow: 0 3px 12px rgba(0,0,0,0.25); line-height: 1.2; }
   
   .stats-bar { display:grid; grid-template-columns:1fr 1fr; }
   .stat { border-right:1px solid var(--border); border-bottom:1px solid var(--border); padding:20px 10px; }
@@ -814,8 +815,8 @@ em { font-style: italic; color: var(--teal); }
 @media (max-width:480px) {
   .services-grid, .doctors-grid { grid-template-columns:1fr; }
   .slider-btn { display:none; }
-  .slide-btns { flex-direction:column; }
-  .btn-primary, .btn-outline { text-align:center; }
+  .slide-btns { flex-direction:column; width: 100%; gap: 12px; }
+  .btn-primary, .btn-outline { text-align:center; width: 100%; padding: 16px 20px; }
 }
 
 /* ===== SCROLL ANIMATIONS ===== */
